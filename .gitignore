@@ -1,0 +1,38 @@
+# Compiled executables
+*.exe
+*.out
+*.o
+*.obj
+
+# Cache directories
+.cache/
+*.cache
+
+# VS Code user-specific settings (keep workspace configs)
+.vscode/.history/
+.vscode/*.log
+
+# Clangd index cache
+.cache/clangd/
+
+# MinGW/GCC temporary files
+*.d
+*.gch
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*~
+*.swp
+*.swo
+*.tmp
+
+# Build directories
+build/
+dist/
+Debug/
+Release/
+

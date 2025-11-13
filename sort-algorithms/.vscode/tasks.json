@@ -1,0 +1,51 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "C++: Build Current File",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "-std=c++20",
+                "-Wall",
+                "-Wextra",
+                "${file}",
+                "-o",
+                "${fileDirname}\\main.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Compiles the current C++ file in its own directory"
+        },
+        {
+            "type": "shell",
+            "label": "C++: Build and Run Current File",
+            "command": "powershell",
+            "args": [
+                "-Command",
+                "C:\\msys64\\mingw64\\bin\\g++.exe -fdiagnostics-color=always -g -std=c++20 -Wall -Wextra '${file}' -o '${fileDirname}\\main.exe'; if ($?) { & '${fileDirname}\\main.exe' }"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "focus": true,
+                "clear": true
+            },
+            "detail": "🚀 Compiles and runs the current C++ file"
+        }
+    ]
+}
+

@@ -1,0 +1,8 @@
+[
+    {
+        "directory": "C:/Users/tuoji/Desktop/Tuojian-PhD-Thesis/c++/c/sort-algorithms/bubble-sort",
+        "command": "C:/msys64/mingw64/bin/g++.exe -std=c++20 -Wall -Wextra -g -IC:/msys64/mingw64/include -IC:/msys64/mingw64/include/c++/14.2.0 -IC:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32 main.cpp -o main.exe",
+        "file": "C:/Users/tuoji/Desktop/Tuojian-PhD-Thesis/c++/c/sort-algorithms/bubble-sort/main.cpp"
+    }
+]
+

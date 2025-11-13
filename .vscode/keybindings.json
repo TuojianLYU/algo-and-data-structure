@@ -1,0 +1,29 @@
+[
+    {
+        "key": "ctrl+shift+b",
+        "command": "workbench.action.tasks.runTask",
+        "args": "C++: Build and Run Current File",
+        "when": "editorLangId == cpp"
+    },
+    {
+        "key": "ctrl+shift+b",
+        "command": "workbench.action.tasks.runTask",
+        "args": "C: Build and Run Current File",
+        "when": "editorLangId == c"
+    },
+    {
+        "key": "f5",
+        "command": "workbench.action.tasks.runTask",
+        "args": "C++: Build and Run Current File",
+        "when": "editorLangId == cpp && !inDebugMode"
+    },
+    {
+        "key": "f5",
+        "command": "workbench.action.tasks.runTask",
+        "args": "C: Build and Run Current File",
+        "when": "editorLangId == c && !inDebugMode"
+    }
+]
+
+
+

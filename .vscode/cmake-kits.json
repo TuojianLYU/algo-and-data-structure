@@ -1,0 +1,18 @@
+[
+    {
+        "name": "GCC 13.2.0 x86_64-w64-mingw32",
+        "compilers": {
+            "C": "C:\\msys64\\mingw64\\bin\\gcc.exe",
+            "CXX": "C:\\msys64\\mingw64\\bin\\g++.exe"
+        },
+        "preferredGenerator": {
+            "name": "MinGW Makefiles"
+        },
+        "environmentVariables": {
+            "PATH": "C:\\msys64\\mingw64\\bin;${env:PATH}"
+        }
+    }
+]
+
+
+
