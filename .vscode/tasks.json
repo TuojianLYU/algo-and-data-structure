@@ -2,180 +2,24 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "build",
             "type": "shell",
-            "label": "C++: Build Project",
-            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "command": "g++",
             "args": [
-                "-fdiagnostics-color=always",
                 "-g",
-                "-std=c++20",
-                "-Wall",
-                "-Wextra",
-                "${workspaceFolder}\\main.cpp",
+                "${file}",
                 "-o",
-                "${workspaceFolder}\\main.exe"
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "problemMatcher": ["$gcc"],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "Compiles all .cpp files in the workspace"
-        },
-        {
-            "type": "shell",
-            "label": "C++: Build and Run",
-            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
-            "args": [
-                "-fdiagnostics-color=always",
-                "-g",
-                "-std=c++20",
-                "-Wall",
-                "-Wextra",
-                "${workspaceFolder}\\main.cpp",
-                "-o",
-                "${workspaceFolder}\\main.exe"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
             "problemMatcher": ["$gcc"],
-            "group": "build",
             "presentation": {
                 "reveal": "always",
                 "panel": "shared"
-            },
-            "dependsOn": []
-        },
-        {
-            "type": "shell",
-            "label": "C: Build Project",
-            "command": "C:\\msys64\\mingw64\\bin\\gcc.exe",
-            "args": [
-                "-fdiagnostics-color=always",
-                "-g",
-                "-std=c11",
-                "-Wall",
-                "-Wextra",
-                "${workspaceFolder}\\main.c",
-                "-o",
-                "${workspaceFolder}\\main_c.exe"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "problemMatcher": ["$gcc"],
-            "group": "build",
-            "detail": "Compiles C files in the workspace"
-        },
-        {
-            "type": "shell",
-            "label": "C: Build and Run",
-            "command": "cmd",
-            "args": [
-                "/c",
-                "C:\\msys64\\mingw64\\bin\\gcc.exe -fdiagnostics-color=always -g -std=c11 -Wall -Wextra ${workspaceFolder}\\main.c -o ${workspaceFolder}\\main_c.exe && ${workspaceFolder}\\main_c.exe"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "problemMatcher": ["$gcc"],
-            "group": "build",
-            "presentation": {
-                "reveal": "always",
-                "panel": "shared"
-            },
-            "detail": "Compiles and runs C program"
-        },
-        {
-            "type": "shell",
-            "label": "C: Build Current File",
-            "command": "C:\\msys64\\mingw64\\bin\\gcc.exe",
-            "args": [
-                "-fdiagnostics-color=always",
-                "-g",
-                "-std=c11",
-                "-Wall",
-                "-Wextra",
-                "${file}",
-                "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
-            ],
-            "options": {
-                "cwd": "${fileDirname}"
-            },
-            "problemMatcher": ["$gcc"],
-            "group": "build",
-            "detail": "Compiles the currently active C file"
-        },
-        {
-            "type": "shell",
-            "label": "C++: Build Current File",
-            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
-            "args": [
-                "-fdiagnostics-color=always",
-                "-g",
-                "-std=c++20",
-                "-Wall",
-                "-Wextra",
-                "${file}",
-                "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
-            ],
-            "options": {
-                "cwd": "${fileDirname}"
-            },
-            "problemMatcher": ["$gcc"],
-            "group": "build",
-            "detail": "Compiles the currently active C++ file"
-        },
-        {
-            "type": "shell",
-            "label": "C++: Build and Run Current File",
-            "command": "powershell",
-            "args": [
-                "-Command",
-                "C:\\msys64\\mingw64\\bin\\g++.exe -fdiagnostics-color=always -g -std=c++20 -Wall -Wextra '${file}' -o '${fileDirname}\\${fileBasenameNoExtension}.exe'; if ($?) { & '${fileDirname}\\${fileBasenameNoExtension}.exe' }"
-            ],
-            "options": {
-                "cwd": "${fileDirname}"
-            },
-            "problemMatcher": ["$gcc"],
-            "group": {
-                "kind": "build",
-                "isDefault": false
-            },
-            "presentation": {
-                "reveal": "always",
-                "panel": "shared",
-                "focus": true,
-                "clear": true
-            },
-            "detail": "🚀 ONE-CLICK: Compiles and runs the current C++ file"
-        },
-        {
-            "type": "shell",
-            "label": "C: Build and Run Current File",
-            "command": "powershell",
-            "args": [
-                "-Command",
-                "C:\\msys64\\mingw64\\bin\\gcc.exe -fdiagnostics-color=always -g -std=c11 -Wall -Wextra '${file}' -o '${fileDirname}\\${fileBasenameNoExtension}.exe'; if ($?) { & '${fileDirname}\\${fileBasenameNoExtension}.exe' }"
-            ],
-            "options": {
-                "cwd": "${fileDirname}"
-            },
-            "problemMatcher": ["$gcc"],
-            "group": "build",
-            "presentation": {
-                "reveal": "always",
-                "panel": "shared",
-                "focus": true,
-                "clear": true
-            },
-            "detail": "🚀 ONE-CLICK: Compiles and runs the current C file"
+            }
         }
     ]
 }

@@ -1,28 +1,28 @@
 #include <iostream>
 #include <vector>
+
 using namespace std;
 
-void swap(vector<int> &nums, int i, int j);
-void insertionSort(vector<int> &nums);
+void insertSort(vector<int> &vec) {
 
-void insertionSort(vector<int> &nums) {
-  for (size_t i = 1; i < nums.size(); i++) {
-    int base = nums[i];
+  for (int i = 1; i < vec.size(); i++) {
+    int base = vec[i];
     int j = i - 1;
-    while (j >= 0 && nums[j] > base) {
-      nums[j + 1] = nums[j];
+    while (j >= 0 && vec[j] > base) {
+      vec[j + 1] = vec[j];
       j--;
     }
-    nums[j + 1] = base;
+    vec[j + 1] = base;
   }
 }
 
 int main() {
-  vector<int> nums = {3, 1, 4, 2};
-  insertionSort(nums);
-  for (size_t i = 0; i < nums.size(); i++) {
-    cout << nums[i] << " ";
+  vector<int> vec = {2, 5, 1, 3, 6, 2, 1};
+  insertSort(vec);
+
+  for (int i = 0; i < vec.size(); i++) {
+    cout << vec[i] << endl;
   }
-  cout << endl;
+
   return 0;
 }

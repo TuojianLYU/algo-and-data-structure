@@ -3,24 +3,26 @@
 
 using namespace std;
 
-void bubbleSort(vector<int> &nums) {
-  for (int i = 0; i < nums.size() - 1; i++) {
-    for (int j = i + 1; j < nums.size(); j++) {
-      if (nums[i] > nums[j]) {
-        nums[i] = nums[i] ^ nums[j];
-        nums[j] = nums[i] ^ nums[j];
-        nums[i] = nums[i] ^ nums[j];
+void bubbleSort(vector<int> &vec) {
+  for (int i = 0; i < vec.size(); i++) {
+    for (int j = 0; j < vec.size() - i -1; j++) {
+      if (vec[j] > vec[j + 1]) {
+        vec[j] = vec[j] ^ vec[j + 1];
+        vec[j + 1] = vec[j] ^ vec[j + 1];
+        vec[j] = vec[j] ^ vec[j + 1];
       }
     }
   }
 }
 
 int main() {
-  vector<int> nums = {10, 7, 8, 9, 1, 5};
-  bubbleSort(nums);
-  for (size_t i = 0; i < nums.size(); i++) {
-    cout << nums[i] << " ";
+
+  vector<int> vec = {5, 2, 1, 6, 2};
+  bubbleSort(vec);
+
+  for (int i = 0; i < vec.size(); i++) {
+    cout << vec[i] << endl;
   }
-  cout << endl;
+
   return 0;
 }

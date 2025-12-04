@@ -9,8 +9,8 @@ void swap(vector<int> &nums, int i, int j);
 int main() {
   vector<int> nums = {10, 7, 8, 9, 1, 5};
   quickSort(nums, 0, nums.size() - 1);
-  for (size_t i = 0; i < nums.size(); i++) {
-    cout << nums[i] << " ";
+  for (int num : nums) {
+    cout << num << " ";
   }
   cout << endl;
 
